@@ -7,8 +7,8 @@ enum ButtomNaviBar {
   ;
 }
 
-class ScafolldWithNaviBar extends StatelessWidget {
-  const ScafolldWithNaviBar({
+class ScaffoldWithNaviBar extends StatelessWidget {
+  const ScaffoldWithNaviBar({
     super.key,
     required this.navigationShell,
     required this.children,
@@ -61,8 +61,8 @@ class ScafolldWithNaviBar extends StatelessWidget {
   }
 }
 
-class ScafolldWithTabBarView extends StatelessWidget {
-  const ScafolldWithTabBarView({
+class ScaffoldWithTabBarView extends StatelessWidget {
+  const ScaffoldWithTabBarView({
     super.key,
     required this.navigationShell,
     required this.children,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/go_router/pages/home_page.dart';
 import 'package:flutter_playground/go_router/pages/test_pages.dart';
-import 'package:flutter_playground/go_router/widget/custom_scafolld.dart';
+import 'package:flutter_playground/go_router/widget/custom_scaffold.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -86,7 +86,7 @@ class MainShellRoute extends StatefulShellRouteData {
     StatefulNavigationShell navigationShell,
     List<Widget> children,
   ) {
-    return ScafolldWithNaviBar(
+    return ScaffoldWithNaviBar(
       navigationShell: navigationShell,
       children: children,
     );
@@ -163,7 +163,7 @@ class TopTabShellRoute extends StatefulShellRouteData {
     StatefulNavigationShell navigationShell,
     List<Widget> children,
   ) {
-    return ScafolldWithTabBarView(
+    return ScaffoldWithTabBarView(
       navigationShell: navigationShell,
       children: children,
     );
