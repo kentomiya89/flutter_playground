@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Flutter Version
 
-This project uses FVM (Flutter Version Manager) with Flutter 3.27.1 (stable). Prefix Flutter commands with `fvm` if FVM is installed:
+This project uses FVM (Flutter Version Manager) with Flutter 3.41.1 (stable). Prefix Flutter commands with `fvm` if FVM is installed:
 
 ```bash
 fvm flutter run
