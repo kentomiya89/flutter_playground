@@ -1,50 +1,21 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Flutter の各種技術・パッケージ・UIパターンを気軽に検証するための playground プロジェクト。`lib/main_*.dart` にサンプルを追加して、本番投入前に動作確認・実装方法の模索を行う。
 
-## Flutter Version
+## セットアップ
 
-This project uses FVM (Flutter Version Manager) with Flutter 3.41.1 (stable). Prefix Flutter commands with `fvm` if FVM is installed:
+FVM で Flutter 3.41.1 を管理。コマンドは必ず `fvm flutter` を使う。
 
 ```bash
-fvm flutter run
-fvm flutter build apk
 fvm flutter pub get
+fvm flutter run
+fvm flutter analyze
 ```
 
-## Common Commands
+## サンプル一覧
 
-```bash
-# Install dependencies
-flutter pub get
+- `lib/main_qr.dart` — カスタムオーバーレイUIつきQRコードスキャン（`mobile_scanner: ^7.2.0`）
 
-# Run the app
-flutter run
+## 新しいサンプルの追加
 
-# Build for release
-flutter build apk          # Android
-flutter build ios          # iOS
-flutter build macos        # macOS
-
-# Lint / analyze
-flutter analyze
-
-# Run tests (none currently exist)
-flutter test
-```
-
-## Architecture
-
-This is a single-file Flutter application (`lib/main.dart`) demonstrating QR code scanning with a custom overlay UI.
-
-**Widget hierarchy:**
-
-- `MyHome` (StatelessWidget) — entry point, renders `TestBarcodeScannerWithOverlay`
-- `TestBarcodeScannerWithOverlay` (StatefulWidget) — owns `MobileScannerController`, defines the `scanWindow` Rect, composes scanner + overlay in a `Stack`
-- `ScannedBarcodeLabel` (StatelessWidget) — listens to `controller.barcodes` stream via `StreamBuilder`, displays scanned values
-- `ScanWindowOverlay` (StatelessWidget) — listens to controller state via `ValueListenableBuilder`, renders `ScanWindowPainter` only when scanner is initialized and running
-- `ScanWindowPainter` (CustomPainter) — draws a semi-transparent overlay with a rectangular cutout over the scan window area
-
-**Key package:** `mobile_scanner: ^6.0.6` — provides `MobileScannerController`, `MobileScanner` widget, `BarcodeCapture` stream, and `BarcodeFormat` enum.
-
-**Platform requirements:** iOS 15.5+, Dart SDK 3.6.0+.
+`/new-sample <name>` を使うと自動で3ステップ（ファイル作成・launch.json更新・このファイル更新）を実行できる。
