@@ -15,7 +15,8 @@
             "type": "pickString",
             "description": "Which sample?",
             "options": [
-                "lib/main_qr.dart"
+                "lib/main_qr.dart",
+                "lib/main_calendar.dart"
             ]
         }
     ]
