@@ -1,20 +1,26 @@
 PODS:
+  - eventide (1.0.0):
+    - Flutter
   - Flutter (1.0.0)
   - mobile_scanner (7.0.0):
     - Flutter
     - FlutterMacOS
 
 DEPENDENCIES:
+  - eventide (from `.symlinks/plugins/eventide/ios`)
   - Flutter (from `Flutter`)
   - mobile_scanner (from `.symlinks/plugins/mobile_scanner/darwin`)
 
 EXTERNAL SOURCES:
+  eventide:
+    :path: ".symlinks/plugins/eventide/ios"
   Flutter:
     :path: Flutter
   mobile_scanner:
     :path: ".symlinks/plugins/mobile_scanner/darwin"
 
 SPEC CHECKSUMS:
+  eventide: a59fc9d87326700ec76eadf5a2abfd2447ce5e87
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
   mobile_scanner: 77265f3dc8d580810e91849d4a0811a90467ed5e
 
