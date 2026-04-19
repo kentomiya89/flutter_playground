@@ -16,6 +16,7 @@ fvm flutter analyze
 
 - `lib/main_qr.dart` — カスタムオーバーレイUIつきQRコードスキャン（`mobile_scanner: ^7.2.0`）
 - `lib/main_calendar.dart` — Eventideパッケージ vs 自作Pigeonチャンネルでネイティブカレンダーイベント作成を比較（`eventide: ^2.1.1`, `pigeon: ^26.1.7`）
+- `lib/main_image_picker.dart` — ギャラリー選択とカメラ撮影で画像をプレビュー表示（`image_picker: ^1.1.2`）
 
 ## 新しいサンプルの追加
 
